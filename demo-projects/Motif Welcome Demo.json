@@ -1,0 +1,650 @@
+{
+  "name": "Motif Welcome Demo",
+  "bpm": 95,
+  "measures": 16,
+  "masterVolume": 0.85,
+  "tracks": [
+    {
+      "id": "track-keys",
+      "name": "Acoustic Piano",
+      "trackType": "instrument",
+      "instrument": "acoustic_grand_piano",
+      "volume": 0.8,
+      "clips": [
+        {
+          "id": "clip-piano-arp",
+          "name": "Lyrical Arpeggios",
+          "startTime": 0,
+          "duration": 64,
+          "patternDuration": 16,
+          "notes": [
+            {
+              "id": "p_n1",
+              "midi": 45,
+              "time": 0,
+              "duration": 4,
+              "velocity": 1
+            },
+            {
+              "id": "p_n2",
+              "midi": 52,
+              "time": 0.5,
+              "duration": 1,
+              "velocity": 0.85
+            },
+            {
+              "id": "p_n3",
+              "midi": 57,
+              "time": 1,
+              "duration": 1,
+              "velocity": 0.9
+            },
+            {
+              "id": "p_n4",
+              "midi": 60,
+              "time": 1.5,
+              "duration": 1,
+              "velocity": 0.95
+            },
+            {
+              "id": "p_n5",
+              "midi": 64,
+              "time": 2,
+              "duration": 2,
+              "velocity": 1
+            },
+            {
+              "id": "p_n6",
+              "midi": 60,
+              "time": 3,
+              "duration": 1,
+              "velocity": 0.85
+            },
+            {
+              "id": "p_n7",
+              "midi": 41,
+              "time": 4,
+              "duration": 4,
+              "velocity": 1
+            },
+            {
+              "id": "p_n8",
+              "midi": 48,
+              "time": 4.5,
+              "duration": 1,
+              "velocity": 0.85
+            },
+            {
+              "id": "p_n9",
+              "midi": 53,
+              "time": 5,
+              "duration": 1,
+              "velocity": 0.9
+            },
+            {
+              "id": "p_n10",
+              "midi": 57,
+              "time": 5.5,
+              "duration": 1,
+              "velocity": 0.95
+            },
+            {
+              "id": "p_n11",
+              "midi": 60,
+              "time": 6,
+              "duration": 2,
+              "velocity": 1
+            },
+            {
+              "id": "p_n12",
+              "midi": 57,
+              "time": 7,
+              "duration": 1,
+              "velocity": 0.85
+            },
+            {
+              "id": "p_n13",
+              "midi": 36,
+              "time": 8,
+              "duration": 4,
+              "velocity": 1
+            },
+            {
+              "id": "p_n14",
+              "midi": 43,
+              "time": 8.5,
+              "duration": 1,
+              "velocity": 0.85
+            },
+            {
+              "id": "p_n15",
+              "midi": 48,
+              "time": 9,
+              "duration": 1,
+              "velocity": 0.9
+            },
+            {
+              "id": "p_n16",
+              "midi": 52,
+              "time": 9.5,
+              "duration": 1,
+              "velocity": 0.95
+            },
+            {
+              "id": "p_n17",
+              "midi": 55,
+              "time": 10,
+              "duration": 2,
+              "velocity": 1
+            },
+            {
+              "id": "p_n18",
+              "midi": 52,
+              "time": 11,
+              "duration": 1,
+              "velocity": 0.85
+            },
+            {
+              "id": "p_n19",
+              "midi": 43,
+              "time": 12,
+              "duration": 4,
+              "velocity": 1
+            },
+            {
+              "id": "p_n20",
+              "midi": 50,
+              "time": 12.5,
+              "duration": 1,
+              "velocity": 0.85
+            },
+            {
+              "id": "p_n21",
+              "midi": 55,
+              "time": 13,
+              "duration": 1,
+              "velocity": 0.9
+            },
+            {
+              "id": "p_n22",
+              "midi": 59,
+              "time": 13.5,
+              "duration": 1,
+              "velocity": 0.95
+            },
+            {
+              "id": "p_n23",
+              "midi": 62,
+              "time": 14,
+              "duration": 2,
+              "velocity": 1
+            },
+            {
+              "id": "p_n24",
+              "midi": 59,
+              "time": 15,
+              "duration": 1,
+              "velocity": 0.85
+            }
+          ]
+        }
+      ],
+      "isMuted": false,
+      "isSoloed": false
+    },
+    {
+      "id": "track-bass",
+      "name": "Fretless Bass",
+      "trackType": "instrument",
+      "instrument": "ms_b8_l0_p39_synth_bass_4",
+      "volume": 0.82,
+      "clips": [
+        {
+          "id": "clip-bass-1",
+          "name": "Melodic Bassline",
+          "startTime": 16,
+          "duration": 48,
+          "patternDuration": 16,
+          "notes": [
+            {
+              "id": "b_n1",
+              "midi": 33,
+              "time": 0,
+              "duration": 3,
+              "velocity": 1
+            },
+            {
+              "id": "b_n2",
+              "midi": 31,
+              "time": 3,
+              "duration": 1,
+              "velocity": 0.905
+            },
+            {
+              "id": "b_n3",
+              "midi": 29,
+              "time": 4,
+              "duration": 3,
+              "velocity": 1
+            },
+            {
+              "id": "b_n4",
+              "midi": 31,
+              "time": 7,
+              "duration": 1,
+              "velocity": 0.905
+            },
+            {
+              "id": "b_n5",
+              "midi": 36,
+              "time": 8,
+              "duration": 3,
+              "velocity": 1
+            },
+            {
+              "id": "b_n6",
+              "midi": 35,
+              "time": 11,
+              "duration": 1,
+              "velocity": 0.905
+            },
+            {
+              "id": "b_n7",
+              "midi": 31,
+              "time": 12,
+              "duration": 3,
+              "velocity": 1
+            },
+            {
+              "id": "b_n8",
+              "midi": 32,
+              "time": 15,
+              "duration": 1,
+              "velocity": 0.905
+            }
+          ]
+        }
+      ],
+      "isMuted": false,
+      "isSoloed": false
+    },
+    {
+      "id": "track-drums",
+      "name": "Drums",
+      "trackType": "drums",
+      "instrument": "drum_kit_p14_room_6",
+      "volume": 0.57,
+      "clips": [
+        {
+          "id": "clip-drums-intro",
+          "name": "Soft Ride Groove",
+          "startTime": 16,
+          "duration": 16,
+          "patternDuration": 4,
+          "notes": [
+            {
+              "id": "d_n1",
+              "midi": 36,
+              "time": 0,
+              "duration": 0.5,
+              "velocity": 0.865
+            },
+            {
+              "id": "d_n2",
+              "midi": 51,
+              "time": 0,
+              "duration": 0.5,
+              "velocity": 0.765
+            },
+            {
+              "id": "d_n3",
+              "midi": 51,
+              "time": 1,
+              "duration": 0.5,
+              "velocity": 0.665
+            },
+            {
+              "id": "d_n4",
+              "midi": 38,
+              "time": 2,
+              "duration": 0.5,
+              "velocity": 0.665
+            },
+            {
+              "id": "d_n5",
+              "midi": 51,
+              "time": 2,
+              "duration": 0.5,
+              "velocity": 0.765
+            },
+            {
+              "id": "d_n6",
+              "midi": 36,
+              "time": 2.5,
+              "duration": 0.5,
+              "velocity": 0.765
+            },
+            {
+              "id": "d_n7",
+              "midi": 51,
+              "time": 3,
+              "duration": 0.5,
+              "velocity": 0.665
+            }
+          ]
+        },
+        {
+          "id": "clip-drums-main",
+          "name": "Full Groove",
+          "startTime": 32,
+          "duration": 32,
+          "patternDuration": 4,
+          "notes": [
+            {
+              "id": "d_n8",
+              "midi": 36,
+              "time": 0,
+              "duration": 0.5,
+              "velocity": 1
+            },
+            {
+              "id": "d_n9",
+              "midi": 42,
+              "time": 0,
+              "duration": 0.25,
+              "velocity": 0.8999999999999999
+            },
+            {
+              "id": "d_n10",
+              "midi": 42,
+              "time": 0.5,
+              "duration": 0.25,
+              "velocity": 0.7
+            },
+            {
+              "id": "d_n11",
+              "midi": 42,
+              "time": 1,
+              "duration": 0.25,
+              "velocity": 0.8
+            },
+            {
+              "id": "d_n12",
+              "midi": 42,
+              "time": 1.5,
+              "duration": 0.25,
+              "velocity": 0.7
+            },
+            {
+              "id": "d_n13",
+              "midi": 38,
+              "time": 2,
+              "duration": 0.5,
+              "velocity": 0.95
+            },
+            {
+              "id": "d_n14",
+              "midi": 42,
+              "time": 2,
+              "duration": 0.25,
+              "velocity": 0.8999999999999999
+            },
+            {
+              "id": "d_n15",
+              "midi": 42,
+              "time": 2.5,
+              "duration": 0.25,
+              "velocity": 0.7
+            },
+            {
+              "id": "d_n16",
+              "midi": 36,
+              "time": 2.5,
+              "duration": 0.5,
+              "velocity": 0.8999999999999999
+            },
+            {
+              "id": "d_n17",
+              "midi": 42,
+              "time": 3,
+              "duration": 0.25,
+              "velocity": 0.8
+            },
+            {
+              "id": "d_n18",
+              "midi": 46,
+              "time": 3.5,
+              "duration": 0.25,
+              "velocity": 0.8
+            }
+          ]
+        }
+      ],
+      "isMuted": false,
+      "isSoloed": false,
+      "drumEditorMode": "pianoroll"
+    },
+    {
+      "id": "track-voice",
+      "name": "Vocal Hook",
+      "trackType": "voice",
+      "instrument": "voice_oohs",
+      "volume": 0.9,
+      "clips": [
+        {
+          "id": "clip-voice-verse",
+          "name": "Verse",
+          "startTime": 32,
+          "duration": 16,
+          "notes": [
+            {
+              "id": "v_n1",
+              "midi": 69,
+              "time": 0,
+              "duration": 1,
+              "velocity": 0.8,
+              "lyric": "Find"
+            },
+            {
+              "id": "v_n2",
+              "midi": 71,
+              "time": 1,
+              "duration": 0.5,
+              "velocity": 0.8,
+              "lyric": "the"
+            },
+            {
+              "id": "v_n3",
+              "midi": 72,
+              "time": 1.5,
+              "duration": 2,
+              "velocity": 0.85,
+              "lyric": "spark,"
+            },
+            {
+              "id": "v_n4",
+              "midi": 69,
+              "time": 4,
+              "duration": 1,
+              "velocity": 0.8,
+              "lyric": "in"
+            },
+            {
+              "id": "v_n5",
+              "midi": 67,
+              "time": 5,
+              "duration": 0.5,
+              "velocity": 0.8,
+              "lyric": "the"
+            },
+            {
+              "id": "v_n6",
+              "midi": 65,
+              "time": 5.5,
+              "duration": 2,
+              "velocity": 0.85,
+              "lyric": "dark,"
+            },
+            {
+              "id": "v_n7",
+              "midi": 67,
+              "time": 8,
+              "duration": 1,
+              "velocity": 0.8,
+              "lyric": "let"
+            },
+            {
+              "id": "v_n8",
+              "midi": 69,
+              "time": 9,
+              "duration": 0.5,
+              "velocity": 0.8,
+              "lyric": "Mo-"
+            },
+            {
+              "id": "v_n9",
+              "midi": 72,
+              "time": 9.5,
+              "duration": 2,
+              "velocity": 0.85,
+              "lyric": "-tif"
+            },
+            {
+              "id": "v_n10",
+              "midi": 74,
+              "time": 12,
+              "duration": 1,
+              "velocity": 0.8,
+              "lyric": "guide"
+            },
+            {
+              "id": "v_n11",
+              "midi": 72,
+              "time": 13,
+              "duration": 0.5,
+              "velocity": 0.8,
+              "lyric": "your"
+            },
+            {
+              "id": "v_n12",
+              "midi": 71,
+              "time": 13.5,
+              "duration": 2.5,
+              "velocity": 0.85,
+              "lyric": "heart."
+            }
+          ],
+          "patternDuration": 16
+        },
+        {
+          "id": "clip-voice-chorus",
+          "name": "Chorus",
+          "startTime": 48,
+          "duration": 16,
+          "notes": [
+            {
+              "id": "v_n13",
+              "midi": 69,
+              "time": 0,
+              "duration": 0.75,
+              "velocity": 0.85,
+              "lyric": "Ev-"
+            },
+            {
+              "id": "v_n14",
+              "midi": 71,
+              "time": 0.75,
+              "duration": 0.75,
+              "velocity": 0.85,
+              "lyric": "-ery"
+            },
+            {
+              "id": "v_n15",
+              "midi": 72,
+              "time": 1.5,
+              "duration": 2,
+              "velocity": 0.9,
+              "lyric": "dream,"
+            },
+            {
+              "id": "v_n16",
+              "midi": 69,
+              "time": 4,
+              "duration": 1,
+              "velocity": 0.85,
+              "lyric": "finds"
+            },
+            {
+              "id": "v_n17",
+              "midi": 67,
+              "time": 5,
+              "duration": 0.5,
+              "velocity": 0.85,
+              "lyric": "a"
+            },
+            {
+              "id": "v_n18",
+              "midi": 65,
+              "time": 5.5,
+              "duration": 2,
+              "velocity": 0.9,
+              "lyric": "way,"
+            },
+            {
+              "id": "v_n19",
+              "midi": 67,
+              "time": 8,
+              "duration": 1,
+              "velocity": 0.85,
+              "lyric": "with"
+            },
+            {
+              "id": "v_n20",
+              "midi": 69,
+              "time": 9,
+              "duration": 0.5,
+              "velocity": 0.85,
+              "lyric": "Mo-"
+            },
+            {
+              "id": "v_n21",
+              "midi": 72,
+              "time": 9.5,
+              "duration": 2,
+              "velocity": 0.9,
+              "lyric": "-tif,"
+            },
+            {
+              "id": "v_n22",
+              "midi": 74,
+              "time": 12,
+              "duration": 1,
+              "velocity": 0.85,
+              "lyric": "start"
+            },
+            {
+              "id": "v_n23",
+              "midi": 76,
+              "time": 13,
+              "duration": 0.5,
+              "velocity": 0.9,
+              "lyric": "to-"
+            },
+            {
+              "id": "v_n24",
+              "midi": 79,
+              "time": 13.5,
+              "duration": 2.5,
+              "velocity": 0.95,
+              "lyric": "-day!"
+            }
+          ],
+          "patternDuration": 16
+        }
+      ],
+      "isMuted": false,
+      "isSoloed": false
+    }
+  ],
+  "chatHistory": []
+}
