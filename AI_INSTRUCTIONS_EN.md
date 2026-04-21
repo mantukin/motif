@@ -442,11 +442,11 @@ If the user asks for a rock/metal guitar part or a modern electric bass part, as
 Your MIDI programming for these instruments must follow a simple two-note system: one note defines **WHAT** to play (chord/root note), the other defines **HOW** to play it rhythmically.
 
 - **Play Range:** Upper MIDI range for selecting chords (guitar) or root notes (bass). These notes must be held for the entire duration of the active harmony.
-- **Phrase Range:** Lower MIDI range — keyswitches that trigger pre-made rhythmic patterns. A single note here triggers a complex performance.
-- **CRITICAL RULE: MIDI DEAD ZONE (C3 - B3):** An entire octave from C3 to B3 is **completely unused**. You **MUST NOT** place notes in this range!
+- **Phrase/Control Ranges:** Lower MIDI ranges contain common phrases, style phrases, silence/stop keys, and other playback controls. A single note here can trigger a complex performance.
+- **CRITICAL RULE:** Follow the exact plugin-specific note ranges below. Do not invent a generic octave split for all UJAM instruments.
 
 ### Naming Convention
-**CRITICALLY IMPORTANT:** Name the MIDI clip to indicate the plugin mode. For example: "Chorus Rhythm (Chord Mode)" for guitar or "Verse Groove (Player Mode)" for bass.
+**CRITICALLY IMPORTANT:** Name the MIDI clip to indicate the plugin mode. For example: "Chorus Rhythm (Player Mode)" or "Intro Arpeggio (Instrument Mode)" for guitar, and "Verse Groove (Player Mode)" for bass.
 
 ---
 
@@ -455,9 +455,12 @@ Your MIDI programming for these instruments must follow a simple two-note system
 Use for tracks with a guitar instrument (e.g., `overdriven_guitar`, `distortion_guitar`).
 
 - **Play Range (C4-F6):** For chords or single notes. For a G5 power chord — place G4 and D5. Hold these notes for the entire duration of the active chord.
-- **Phrase Range (C1-B2):** For rhythmic patterns. The pattern will loop while the note is held.
+- **Common Phrase Range (C1-B2):** Fixed phrase triggers listed below.
+- **Style Phrase Range (C3-Bb3):** Style-dependent rhythmic patterns for the currently selected IRON 2 style.
+- **Stop Key:** `B3`
+- **CRITICAL RULE:** There is no extra dead octave between the phrase keys and the play range. `B3` is the Stop key and the play range starts at `C4`.
 
-#### IRON 2 — Phrase Map (C1-B2)
+#### IRON 2 — Common Phrase Map (C1-B2)
 
 | Key | Description |
 | :--- | :--- |
@@ -488,15 +491,39 @@ Use for tracks with a guitar instrument (e.g., `overdriven_guitar`, `distortion_
 
 ---
 
+### UJAM IRON 2 — Guitar Plugin (Instrument Mode for Custom Arpeggios / Picked Parts)
+
+Use this workflow when the user wants a hand-programmed arpeggio, picked intro, custom riff, or any guitar part that should be written manually instead of relying on a pre-made Player Mode phrase.
+
+- **Clip naming:** Name these clips explicitly, for example: "Intro Arpeggio (Instrument Mode)" or "Verse Picking (Instrument Mode)".
+- **Do not rely on Player Mode phrase keys for this workflow.** In Instrument Mode, the guitar is driven by the fretboard notes in the play range plus key switches below `C4`.
+- **Play Range / Fretboard (`C4-F6`):** Write the actual chord tones or melody notes here. This range is velocity-sensitive and supports up to 4-note polyphony.
+- **Important:** Instrument Mode uses a different keyboard layout from Player Mode. In Instrument Mode, the playable fretboard starts at `C4`, and the notes below `C4` are used for key switches and articulations.
+- **Articulation keys (black keys `Eb3-Bb3`):**
+  - `Eb3`: Dead notes
+  - `F#3 / Gb3`: Muted
+  - `G#3 / Ab3`: Half-muted
+  - `Bb3 / A#3`: Open / sustained
+- **Key switches for custom picking:** While holding notes in the fretboard/play range, use the Instrument Mode key switches below `C4` to define how the notes are performed. For manual arpeggios and picked patterns, prefer the repeated `Picking` keys: `C3`, `D3`, `E3`, `F3`, `G3`, `A3`. Use `C#3 / Db3` for `Release` when you need to stop or separate picked events cleanly.
+- **Optional strum / accent key switches:** `B2` = `Downstroke`, `A2` = `Upstroke`, `A#2 / Bb2` = `Stop - Downstroke`, `G#2 / Ab2` = `Stop - Upstroke`, `B3` = `Strum - Auto`, `A#3 / Bb3` = `Strum - Open`, `G#3 / Ab3` = `Strum - Half Mute`, `F#3 / Gb3` = `Strum - Mute`, `D#3 / Eb3` = `Strum - Dead`.
+- **Trigger Mode recommendation for arpeggios:** Prefer `Trigger Mode: Off` (`C#2 / Db2`) when sequencing custom arpeggios. In this mode, you hold the chord on the fretboard first and then trigger the picking/strum events with the key switches. `Trigger Mode: On` is `D#2 / Eb2` and is better for live-played rhythmic parts where pressing the fretboard notes should trigger sound immediately.
+- **Writing rule for true arpeggios:** Put the chord tones themselves in the fretboard range (`C4-F6`) and write the rhythmic picking pattern separately with key switches below `C4`. Do **not** fake a custom arpeggio by using only one Player Mode phrase key.
+- **Editing rule:** If you move or copy Instrument Mode phrases in the DAW, keep the associated select/control keys below `C4` aligned with the note events above `C4`, otherwise articulations and picking behavior may break.
+- **Realism tips:** Guitar realism depends on note endings as well as note starts, so small gaps between notes can help. Use velocity changes on the fretboard notes to shape dynamics. Velocities on notes outside the play range do not meaningfully shape the guitar notes.
+
+---
+
 ### UJAM ROWDY 2 — Bass Plugin (Player Mode)
 
 Use for tracks with an electric bass instrument (e.g., `electric_bass_finger`, `electric_bass_pick`). Follows the same concept as the guitar plugin.
 
-- **Play Range (C3-B4):** For root notes of the bass line. These notes must be held for the full duration.
-- **Phrase Range (C#1-B2):** For rhythmic patterns.
-- **CRITICAL RULE: MIDI DEAD ZONE:** A dead zone exists between the phrase and play ranges. Do not place notes there!
+- **Play Range (C4-B5):** For root notes of the bass line. These notes must be held for the full duration.
+- **Common Phrase Range (C#1-B2):** Fixed phrase triggers listed below.
+- **Style Phrase Range (C3-Bb3):** Style-dependent rhythmic patterns for the currently selected ROWDY 2 style.
+- **Stop Key:** `B3`
+- **CRITICAL RULE:** There is no extra dead octave between the phrase keys and the play range. `B3` is the Stop key and the play range starts at `C4`.
 
-#### ROWDY 2 — Phrase Map (C#1-B2)
+#### ROWDY 2 — Common Phrase Map (C#1-B2)
 
 | MIDI Note | Description | Bars |
 | :--- | :--- | :--- |
@@ -523,6 +550,29 @@ Use for tracks with an electric bass instrument (e.g., `electric_bass_finger`, `
 | A2 | Disco Samba | 2 |
 | A♯2 | Fill 1/16 Note 4 | 1 |
 | B2 | Salsa | 2 |
+
+---
+
+### UJAM ROWDY 2 — Bass Plugin (Instrument Mode for Custom Riffs / Played Bass Lines)
+
+Use this workflow when the user wants a hand-programmed bass riff, picked bass line, note-by-note groove, slide intro, or any custom bass performance that should be written manually instead of relying on a pre-made Player Mode phrase.
+
+- **Clip naming:** Name these clips explicitly, for example: "Verse Bass Riff (Instrument Mode)" or "Intro Bass Pickup (Instrument Mode)".
+- **Do not rely on Player Mode phrase keys for this workflow.** In Instrument Mode, the bass is written note-by-note, while the octave below the play range is used for performance key switches.
+- **Play Range / Bass notes (`E2` and above):** Write the actual bass notes here.
+- **CRITICAL RULE:** Do **not** place normal bass notes on `C2`, `C#2 / Db2`, `D2`, or `D#2 / Eb2`. Those low keys at the left edge of the Instrument section are not part of the playable normal bass note range.
+- **Key switch octave (`C1-B1`):**
+  - Low slide keys in the `C1-E1` area: use these for pre-intros and slide-ins. Hold a slide key, then play notes in the bass range to trigger the slide.
+  - `C#1 / Db1`: Legato `Off`
+  - `F#1 / Gb1`: Legato `On`
+  - `G1`: Toggle the main keyboard to play dead notes with the played key
+  - `A1`, `B1`: Dead notes
+  - `A#1 / Bb1`: Full Stop
+- **Writing rule:** Put the actual pitched bass notes in the main play range (`E2` and above). Use the `C1-B1` octave only for performance switches, dead notes, full stops, and slides.
+- **Realism rule:** Prefer mostly monophonic bass writing. Bass parts should normally be single-note lines unless the user explicitly wants double-stops or chords.
+- **Legato / articulation tip:** For two consecutive notes that are 1-2 semitones apart, velocity affects how ROWDY performs them. A louder second note tends to create a slide; a softer second note tends to create a hammer-on or pull-off.
+- **Editing rule:** If you use slide, dead-note, legato, or full-stop keys, keep them rhythmically aligned with the bass notes they are meant to affect.
+- **Timing tip:** Realistic bass phrasing depends on note endings as well as note starts, so leave small spaces when appropriate instead of making every note fully legato.
 
 ---
 
