@@ -1,7 +1,7 @@
 # Motif
 
 <p align="center">
-  <img src="shared/public/favicon.png" width="128" height="128" alt="Motif Logo">
+  <img src="favicon.png" width="128" height="128" alt="Motif Logo">
 </p>
 
 A professional tool for music composition and MIDI sequence planning using AI-driven tools. Designed as a lightweight bridge between creative intent and final assembly in your DAW (like Reaper, Ableton, or Logic).
